@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">PRACTICE • IMPROVE • REPEAT</p>
+      <h1>Typing Speed <span>Test</span></h1>
+      <p class="subtitle">Find your rhythm and become a faster typist.</p>
+    </header>
+
+    <section class="stats" aria-label="Test statistics">
+      <div class="stat"><span class="stat-label">Time left</span><strong id="time">30</strong><small>seconds</small></div>
+      <div class="stat"><span class="stat-label">Speed</span><strong id="wpm">0</strong><small>WPM</small></div>
+      <div class="stat"><span class="stat-label">Accuracy</span><strong id="accuracy">100%</strong><small>accurate</small></div>
+    </section>
+
+    <section class="test-card">
+      <div class="toolbar">
+        <label for="duration">Test duration</label>
+        <select id="duration">
+          <option value="30">30 seconds</option>
+          <option value="60">60 seconds</option>
+        </select>
+      </div>
+
+      <div id="passage" class="passage" aria-label="Text to type"></div>
+      <label class="input-label" for="typingInput">Type the text here</label>
+      <textarea id="typingInput" placeholder="Start typing here..." rows="4" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+
+      <div class="actions">
+        <p id="message" aria-live="polite">Click the box above and start typing.</p>
+        <button id="restart" type="button">Restart test ↻</button>
+      </div>
+    </section>
+
+    <section id="result" class="result" hidden aria-live="polite">
+      <h2>Test complete!</h2>
+      <p>You typed <strong id="finalWpm">0 WPM</strong> with <strong id="finalAccuracy">100% accuracy</strong>.</p>
+      <button id="tryAgain" type="button">Try again</button>
+    </section>
+    <footer>Keep practicing — speed comes with consistency.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
